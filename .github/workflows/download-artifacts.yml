@@ -1,0 +1,21 @@
+name: Download Artifacts
+
+on:
+  workflow_run:
+    workflows: ["Build and Upload Artifacts"]
+    types:
+      - completed
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    
+    - name: Download Artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: java-artifacts
+        path: path/to/your/local/directory
