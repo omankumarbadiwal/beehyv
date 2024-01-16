@@ -13,9 +13,12 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
+
+    - run: pwd 
     
     - name: Download Artifacts
       uses: actions/download-artifact@v4
       with:
         name: Package
         path: build/libs
+    
