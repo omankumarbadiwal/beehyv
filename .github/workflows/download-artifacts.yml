@@ -12,10 +12,10 @@ jobs:
     
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     
     - name: Download Artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: java-artifacts
-        path: path/to/your/local/directory
+        path: /usr/bin/bash
