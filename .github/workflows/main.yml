@@ -28,13 +28,13 @@ jobs:
     - name: Build and Test
       run: |
         ./gradlew build --no-daemon
-      working-directory: .
+      working-directory: /home/runner/work/beehyv/beehyv
     
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: java-artifacts
-        path: .
+        path: /home/runner/work/beehyv/beehyv
   upload-artifacts:
     runs-on: ubuntu-latest
     
@@ -48,4 +48,4 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: java-artifacts
-        path: .
+        path: /home/runner/work/beehyv/beehyv
