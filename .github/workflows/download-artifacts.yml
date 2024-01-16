@@ -17,5 +17,5 @@ jobs:
     - name: Download Artifacts
       uses: actions/download-artifact@v4
       with:
-        name: java-artifacts
-        path: build/libs
+        name: Package
+        path: staging
