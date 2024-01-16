@@ -7,11 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  workflow_run:
-    workflows: ["Build and Upload Artifacts"]
-    types:
-      - completed
-
 jobs:
   build:
     runs-on: ubuntu-latest
